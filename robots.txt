@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calep-mkdir.github.io/sitemap.xml

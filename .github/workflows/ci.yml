@@ -1,0 +1,34 @@
+name: Comprobaciones
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: HTML válido y accesible
+        run: npx --yes html-validate@8.24.1 index.html
+
+      - name: JavaScript sin errores de sintaxis
+        run: node --check assets/site.js
+
+      - name: Todos los textos traducidos al inglés
+        run: python3 tools/check_i18n.py
+
+      - name: Enlaces internos y archivos existen
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress index.html
+          fail: true

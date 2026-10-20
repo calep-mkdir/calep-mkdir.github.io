@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Alex Conesa · Desarrollo y sistemas</title>
+<meta name="description" content="Portfolio de Alex Conesa Piñeiro: desarrollo de software con agentes de IA, OnePunto (app Flutter en prueba cerrada en Google Play) y administración de sistemas Linux.">
+<meta name="author" content="Alex Conesa Piñeiro">
+<link rel="canonical" href="https://calep-mkdir.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alex Conesa Piñeiro · Desarrollo y sistemas">
+<meta property="og:description" content="Construyo software con agentes de IA y lo llevo hasta usuarios reales. OnePunto, servidor Linux propio y más.">
+<meta property="og:url" content="https://calep-mkdir.github.io/">
+<meta property="og:image" content="https://calep-mkdir.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f1f4f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1216" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<!--CONTENT-START-->
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="mark" href="#inicio"><span class="mark__dot" aria-hidden="true"></span>Alex Conesa</a>
+    <nav class="nav" aria-label="Secciones" data-i18n-aria="nav_label">
+      <a href="#onepunto" data-i18n="nav_projects">Proyectos</a>
+      <a href="#metodo" data-i18n="nav_method">Cómo trabajo</a>
+      <a href="#trayectoria" data-i18n="nav_path">Trayectoria</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="lang_label">
+      <button type="button" id="lang-es" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section class="hero" id="inicio">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <h1>Alex Conesa Piñeiro</h1>
+      <p class="hero__role" data-i18n="hero_role">Desarrollador de software y técnico de sistemas en Getafe, Madrid.</p>
+      <p class="hero__claim" data-i18n="hero_claim">Construyo software con agentes de IA y lo llevo hasta usuarios reales.</p>
+      <p class="hero__lede" data-i18n="hero_lede">Soy Técnico Superior en DAM. Mi app <a href="#onepunto">OnePunto</a> está en prueba cerrada en Google Play y administro mi propio servidor Linux. Busco un puesto en desarrollo, sistemas o soporte, en remoto o en Madrid, y puedo empezar ya.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="#onepunto" data-i18n="hero_cta">Ver OnePunto</a>
+        <a class="btn" href="#contacto" data-i18n="hero_cta2">Contacto y CV</a>
+      </div>
+      <ul class="links">
+        <li><a href="https://github.com/calep-mkdir" rel="me">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/alex-conesa-pi%C3%B1eiro" rel="me">LinkedIn</a></li>
+        <li><a href="https://onepunto.com">onepunto.com</a></li>
+      </ul>
+    </div>
+    <figure class="hero__photo">
+      <img src="assets/alex.jpg" width="640" height="800" alt="Retrato de Alex Conesa" data-i18n-alt="photo_alt">
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="onepunto" aria-labelledby="op-title">
+  <div class="wrap">
+    <div class="op">
+      <div class="op__intro">
+        <h2 id="op-title" class="op__name"><img class="op__icon" src="assets/onepunto/icono.png" width="192" height="192" alt="">OnePunto</h2>
+        <p class="lede" data-i18n="op_lede">Una app para ver avanzar un objetivo con fecha: un punto por cada día que cuenta. La he llevado de la idea a la prueba cerrada en Google Play.</p>
+        <p class="op__status" data-i18n="op_status">Versión 1.8.1, en prueba cerrada en Google Play. Hecha con Flutter para Android e iOS.</p>
+      </div>
+
+      <div class="demo">
+        <div class="demo__head">
+          <p class="demo__goal" data-i18n="demo_goal">Leer 20 páginas</p>
+          <p class="demo__meta" data-i18n="demo_meta">Lunes a viernes</p>
+        </div>
+        <div class="grid" id="dots" role="img" aria-label="Cuadrícula del objetivo: 21 de 70 días hechos"></div>
+        <div class="demo__foot">
+          <button type="button" class="today" id="today" aria-pressed="false" aria-label="Marcar hoy" data-i18n-aria="demo_btn"><span class="today__dot" aria-hidden="true"></span></button>
+          <div class="demo__status">
+            <p class="demo__count" aria-live="polite"><span id="done-count">21</span> <span data-i18n="demo_of">de</span> 70</p>
+            <p class="demo__state" id="today-state">Hoy, pendiente</p>
+          </div>
+        </div>
+        <p class="demo__note" data-i18n="demo_note">Pruébalo: toca el cuadrado. Es el gesto principal de la app, recreado en esta web.</p>
+      </div>
+    </div>
+
+    <div class="op__cols">
+      <div>
+        <h3 data-i18n="op_h_what">Qué hace</h3>
+        <ul class="dots-list">
+          <li data-i18n="op_what_1">Widgets de pantalla de inicio en Android e iPhone; el de Hoy marca el día sin abrir la app</li>
+          <li data-i18n="op_what_2">Fondo de pantalla vivo en Android que se llena solo</li>
+          <li data-i18n="op_what_3">Recordatorio que solo avisa si hoy falta el punto</li>
+          <li data-i18n="op_what_4">Progreso de la semana y el mes, y compartir como imagen</li>
+          <li data-i18n="op_what_5">Español e inglés, modo claro y oscuro</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="op_h_how">Cómo está hecha</h3>
+        <ul class="dots-list">
+          <li data-i18n="op_how_1">Flutter y Dart, con widgets nativos en Kotlin y SwiftUI</li>
+          <li data-i18n="op_how_2">Arquitectura por capas: dominio en Dart puro, repositorio y controlador</li>
+          <li data-i18n="op_how_3">Datos locales en JSON versionado, con migraciones y escritura atómica</li>
+          <li data-i18n="op_how_4">Tests de dominio, almacenamiento e interfaz, e integración continua</li>
+          <li data-i18n="op_how_5">Auditoría automática de accesibilidad: zonas táctiles, etiquetas y contraste</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="op_h_why">Decisiones de producto</h3>
+        <ul class="dots-list">
+          <li data-i18n="op_why_1">Sin cuentas, anuncios ni rastreo: los datos no salen del móvil</li>
+          <li data-i18n="op_why_2">Un fallo de guardado nunca se muestra como éxito</li>
+          <li data-i18n="op_why_3">Los días de descanso no rompen la racha</li>
+          <li data-i18n="op_why_4">Presupuesto total de unos 150 €: cuenta de Google Play, dominio y correo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="op__links">
+      <a href="https://onepunto.com">onepunto.com</a>
+      <a href="https://github.com/calep-mkdir/onepunto-web" data-i18n="op_web_code">Código de la web</a>
+      <p class="op__private" data-i18n="op_private">El código de la app es privado. Lo enseño con gusto en una entrevista.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metodo" aria-labelledby="method-title">
+  <div class="wrap">
+    <h2 id="method-title" data-i18n="method_title">Cómo trabajo con IA</h2>
+    <p class="lede" data-i18n="method_lede">Con OnePunto aprendí a trabajar con agentes de IA como con un equipo: les doy instrucciones por escrito, reviso cada cambio y no doy nada por bueno sin pruebas.</p>
+    <ol class="steps">
+      <li>
+        <h3 data-i18n="step1_t">Defino antes de pedir</h3>
+        <p data-i18n="step1_p">Escribo qué hace el producto y cómo está construido, y fijo reglas para los agentes antes de que escriban una línea.</p>
+        <p class="file">PRODUCT.md, ARCHITECTURE.md, AGENTS.md</p>
+      </li>
+      <li>
+        <h3 data-i18n="step2_t">Dirijo a los agentes</h3>
+        <p data-i18n="step2_p">Claude Code, Codex u OpenCode implementan cambios pequeños, cada uno en su rama de Git.</p>
+        <p class="file">git, ramas feature/* y fix/*</p>
+      </li>
+      <li>
+        <h3 data-i18n="step3_t">Verifico</h3>
+        <p data-i18n="step3_p">Nada entra sin pasar el formato, el análisis estático y los tests. Lo que compruebo queda apuntado.</p>
+        <p class="file">flutter analyze, flutter test, VERIFICATION.md</p>
+      </li>
+      <li>
+        <h3 data-i18n="step4_t">Publico y escucho</h3>
+        <p data-i18n="step4_p">Subo la versión a la prueba cerrada de Google Play y ordeno el trabajo según lo que cuentan los testers.</p>
+        <p class="file">Play Console, ROADMAP.md</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="proyectos" aria-labelledby="more-title">
+  <div class="wrap">
+    <h2 id="more-title" data-i18n="more_title">Otros proyectos</h2>
+    <div class="projects">
+      <article class="project">
+        <div class="project__head">
+          <h3 data-i18n="vps_t">Servidor Linux con asistente de IA</h3>
+          <p class="project__meta" data-i18n="vps_meta">VPS con Ubuntu</p>
+        </div>
+        <div class="project__body">
+          <p data-i18n="vps_p">Un asistente que usa modelos de lenguaje (DeepSeek) por API, desplegado en mi propio VPS como servicio de systemd. Solo se entra con clave SSH, y el firewall UFW y Fail2Ban cortan los intentos de fuerza bruta.</p>
+          <p class="project__stack">Linux, systemd, SSH, UFW, Fail2Ban</p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project__head">
+          <h3>onepunto.com</h3>
+          <p class="project__meta" data-i18n="web_meta">Publicada en GitHub Pages</p>
+        </div>
+        <div class="project__body">
+          <figure class="project__shot">
+            <img src="assets/onepunto/web.jpg" width="960" height="504" loading="lazy" alt="Portada de onepunto.com: el titular «Haz visible tu progreso» junto a una cuadrícula de puntos" data-i18n-alt="web_alt">
+          </figure>
+          <p data-i18n="web_p">La web pública de OnePunto, en español e inglés. La genera un script de Python, no carga nada de terceros y tiene una política de seguridad de contenido estricta, security.txt y etiquetas para buscadores y redes sociales.</p>
+          <div class="project__links">
+            <a href="https://onepunto.com" data-i18n="web_link">Ver la web</a>
+            <a href="https://github.com/calep-mkdir/onepunto-web" data-i18n="web_code">Código</a>
+          </div>
+          <p class="project__stack">HTML, CSS, JavaScript, Python</p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project__head">
+          <h3 data-i18n="hw_t">Montaje y soporte de equipos</h3>
+          <p class="project__meta">Hardware</p>
+        </div>
+        <div class="project__body">
+          <p data-i18n="hw_p">Monto PCs desde cero, eligiendo cada pieza por compatibilidad, rendimiento y presupuesto. Instalo Windows y Linux con sus drivers, diagnostico fallos de hardware, firmware y temperatura, y cambio componentes cuando hace falta.</p>
+          <p class="project__stack">Windows, Linux, hardware</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="stack" aria-labelledby="stack-title">
+  <div class="wrap">
+    <h2 id="stack-title" data-i18n="stack_title">Con qué trabajo</h2>
+    <dl class="stack">
+      <div><dt data-i18n="stack_ai">Desarrollo con IA</dt><dd data-i18n="stack_ai_v">Claude Code, Codex, OpenCode y APIs de modelos de lenguaje</dd></div>
+      <div><dt data-i18n="stack_mobile">Móvil</dt><dd data-i18n="stack_mobile_v">Flutter y Dart, widgets nativos en Kotlin y SwiftUI, Google Play Console</dd></div>
+      <div><dt data-i18n="stack_lang">Lenguajes</dt><dd data-i18n="stack_lang_v">Java, C#, Python, SQL, HTML, CSS y JavaScript</dd></div>
+      <div><dt data-i18n="stack_sys">Sistemas</dt><dd data-i18n="stack_sys_v">Linux (Ubuntu), systemd, SSH, UFW, Fail2Ban y Windows; nociones de Active Directory y Microsoft 365</dd></div>
+      <div><dt data-i18n="stack_flow">Flujo de trabajo</dt><dd data-i18n="stack_flow_v">Git, GitHub, integración continua, tests automatizados, GitHub Pages y Unity</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="trayectoria" aria-labelledby="path-title">
+  <div class="wrap">
+    <h2 id="path-title" data-i18n="path_title">Experiencia y formación</h2>
+    <ol class="timeline">
+      <li>
+        <p class="when" data-i18n="t1_when">2026, en curso</p>
+        <div><h3>Google IT Automation with Python · Google</h3><p data-i18n="t1_p">Certificado profesional: automatización con Python, Git, resolución de problemas y gestión de sistemas.</p></div>
+      </li>
+      <li>
+        <p class="when" data-i18n="t2_when">2025, 6 meses</p>
+        <div><h3 data-i18n="t2_t">Desarrollador de software en prácticas · Zaitec</h3><p data-i18n="t2_p">Mecánicas de juego en C# con Unity, programación orientada a objetos, control de versiones con Git, pruebas y depuración.</p></div>
+      </li>
+      <li>
+        <p class="when">2023 – 2025</p>
+        <div><h3 data-i18n="t3_t">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) · MEDAC</h3><p data-i18n="t3_p">Programación, bases de datos, desarrollo de interfaces, acceso a datos y sistemas informáticos.</p></div>
+      </li>
+      <li>
+        <p class="when" data-i18n="t4_when">2021 – hoy</p>
+        <div><h3 data-i18n="t4_t">Coordinador de gestión y monitor · Asociación Juvenil Grupo Orión (voluntariado)</h3><p data-i18n="t4_p">Gestiono subvenciones públicas de más de 6.000 €, coordino eventos de más de 200 personas y llevo un grupo de jóvenes de 17 y 18 años.</p></div>
+      </li>
+    </ol>
+    <p class="extra" data-i18n="extra">Español nativo, inglés B2, carnet de conducir y coche propio.</p>
+  </div>
+</section>
+
+<section class="section contact" id="contacto" aria-labelledby="contact-title">
+  <div class="wrap">
+    <h2 id="contact-title" data-i18n="contact_title">Disponible para empezar ya, en remoto o en Madrid.</h2>
+    <div class="mail">
+      <a class="mail__addr" id="email" href="mailto:alexconepi@gmail.com">alexconepi@gmail.com</a>
+      <button type="button" class="btn btn--small" id="copy-email">Copiar</button>
+    </div>
+    <ul class="contact__links">
+      <li><a href="https://www.linkedin.com/in/alex-conesa-pi%C3%B1eiro" rel="me">LinkedIn</a></li>
+      <li><a href="https://github.com/calep-mkdir" rel="me">GitHub</a></li>
+    </ul>
+    <div class="cvs">
+      <a class="btn" href="cv/CV_Alex_Conesa_Desarrollador_Software.pdf"><span data-i18n="cv_dev">CV de desarrollo de software</span> <span class="btn__meta">PDF</span></a>
+      <a class="btn" href="cv/CV_Alex_Conesa_Sistemas_Soporte_IT.pdf"><span data-i18n="cv_sys">CV de sistemas y soporte IT</span> <span class="btn__meta">PDF</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p data-i18n="foot">Hecha con HTML, CSS y JavaScript, sin dependencias ni rastreo. Publicada en GitHub Pages.</p>
+    <p>© 2026 Alex Conesa Piñeiro</p>
+  </div>
+</footer>
+<!--CONTENT-END-->
+</body>
+</html>
