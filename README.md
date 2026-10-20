@@ -11,7 +11,7 @@ Una sola página en español e inglés con mis proyectos, cómo trabajo con IA, 
 ## Decisiones
 
 - **Sin dependencias.** HTML, CSS y JavaScript propios. No hay frameworks, ni paso de compilación, ni `node_modules`.
-- **Sin peticiones a terceros.** Las fuentes (Bricolage Grotesque, Instrument Sans e IBM Plex Mono, licencia OFL) se sirven desde el propio sitio. No hay analítica ni rastreo.
+- **Sin peticiones a terceros.** Las fuentes se sirven desde el propio sitio: Jost, la misma letra de OnePunto, y Atkinson Hyperlegible Next para el texto (ambas con licencia OFL). No hay analítica ni rastreo.
 - **Política de seguridad de contenido estricta.** Cada página solo puede cargar archivos de este mismo sitio: sin scripts ni estilos en línea.
 - **Bilingüe sin duplicar páginas.** El español está en el HTML y el inglés en `assets/site.js`. El idioma se elige según el navegador, se recuerda entre visitas y se puede forzar con `#en` o `#es`.
 - **Accesible.** Enlace para saltar al contenido, foco visible, textos alternativos, etiquetas en los controles y respeto de «reducir movimiento».
